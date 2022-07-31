@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar {
+  display: inline-block;
+  padding: 8px;
+  font-family: sans-serif;
+  justify-self: center;
+}
+
+.nav-bar button {
+  all: unset;
+  padding: 8px;
+}
+
+.nav-bar button:hover {
+  background-color: #e996c9; 
+  color: white;
+  border-radius: 12px;
+}

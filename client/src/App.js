@@ -1,13 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import ShopFront from './ShopFront.js'
+import "./App.css";
+import NavBar from './components/NavBar';
+import Title from "./components/Header";
+// import Switch from '@mui/material/Switch';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <ShopFront/>
-      </header>
+      <Title/>
+      <NavBar/>
+
     </div>
   );
 }
