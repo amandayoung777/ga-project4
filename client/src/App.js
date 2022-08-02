@@ -9,6 +9,7 @@ import {
   Link,
   useParams,
 } from "react-router-dom";
+import Products from "./components/Products";
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Title/>
       <NavBar/>
+      <Products/>
 
     </div>
   );

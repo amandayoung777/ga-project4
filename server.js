@@ -1,7 +1,7 @@
 const express = require('express');
 const pg = require('pg')
-// const pgSession = require('connect-pg-simple');
 // const expressSession = require('express-session');
+// const pgSession = require('connect-pg-simple')(expressSession);
 const db = require('../ga-project4/baking-shop/db/db.js')
 
 const productController = require('../ga-project4/baking-shop/controllers/productslist');
@@ -16,8 +16,12 @@ const app = express();
 //       pool:db,
 //       createTableIfMissing:true,
 //   }),
-//   secret: 'ajfbhrg'
+//   secret: ','
 // }))
+
+// Tell server where client/statics folders are
+app.use(express.static('client'))
+app.use(express.json())
 
 app.use('/api/products', productController)
 // app.use('/api/session', sessionController)

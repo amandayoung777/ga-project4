@@ -5,3 +5,5 @@ INSERT INTO products (name, price, img) VALUES ('Mini Gingerbread Houses (5 Hous
 INSERT INTO products (name, price, img) VALUES ('Buche de Noel', 80, 'https://imgur.com/xrYoXEF');
 INSERT INTO products (name, price, img) VALUES ('Custom Gingerbread Houses (5 Houses)', 35, 'https://imgur.com/RvHH0IM');
 INSERT INTO products (name, price, img) VALUES ('Mixed Holiday Packs (1 pack)', 10, 'https://imgur.com/ANinMFA');
+
+INSERT INTO users (name, email, password_hash, admin) VALUES ('amanda', 'amanda@test.com', 'test123', 'true');

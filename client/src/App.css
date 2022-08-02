@@ -54,3 +54,10 @@
   color: white;
   border-radius: 12px;
 }
+
+.prods {
+  
+    display: grid;
+    grid-template: auto auto auto auto / 1fr 1fr;
+
+}
