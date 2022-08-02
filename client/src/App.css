@@ -42,6 +42,11 @@
   padding: 8px;
   font-family: sans-serif;
   justify-self: center;
+
+}
+
+.contact button {
+  all: unset;
 }
 
 .nav-bar button {
@@ -56,8 +61,12 @@
 }
 
 .prods {
-  
     display: grid;
-    grid-template: auto auto auto auto / 1fr 1fr;
+    grid-template: auto auto auto auto / 1fr 1fr 1fr;
+}
 
+.prod-img {
+ height: 250px;
+ width: 250px;
+ border-radius: 15px;
 }

@@ -32,9 +32,10 @@ function Products(props) {
         {allProducts.map((prod) => {
           return (
             <div className="prod-id">
+                            <img className="prod-img" src={prod.img} alt={prod.name}></img>
               <p>{prod.name}</p>
-              <p>{prod.price}</p>
-              <img src={prod.img} alt={prod.name}></img>
+              <p>${prod.price}</p>
+
             </div>
           );
         })}
