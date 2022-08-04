@@ -2,16 +2,16 @@ const express = require('express');
 const pg = require('pg')
 const expressSession = require('express-session');
 const pgSession = require('connect-pg-simple')(expressSession);
-const db = require('/baking-shop/db/db.js');
+const db = require('baking-shop/db/db.js');
 
 
-const productController = require('/baking-shop/controllers/productslist');
-const sessionController = require('/baking-shop/controllers/session');
-const usersController = require('/baking-shop/controllers/users') 
+const productController = require('baking-shop/controllers/productslist');
+const sessionController = require('baking-shop/controllers/session');
+const usersController = require('baking-shop/controllers/users') ;
 
 const port = process.env.PORT || 3001;
 const app = express();
-app.use(express.static('./client/build'))
+app.use(express.static('./client/build'));
 
 app.use(expressSession({
   store: new pgSession({
@@ -22,8 +22,8 @@ app.use(expressSession({
 }))
 
 // Tell server where client/statics folders are
-app.use(express.static('client'))
-app.use(express.json())
+app.use(express.static('client'));
+app.use(express.json());
 
 app.use('/api/products', productController);
 app.use('/api/session', sessionController);
