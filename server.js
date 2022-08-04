@@ -2,7 +2,8 @@ const express = require('express');
 const pg = require('pg')
 const expressSession = require('express-session');
 const pgSession = require('connect-pg-simple')(expressSession);
-const db = require('../ga-project4/baking-shop/db/db.js')
+const db = require('../ga-project4/baking-shop/db/db.js');
+
 
 const productController = require('../ga-project4/baking-shop/controllers/productslist');
 const sessionController = require('../ga-project4/baking-shop/controllers/session');
@@ -10,6 +11,7 @@ const usersController = require('../ga-project4/baking-shop/controllers/users')
 
 const port = process.env.PORT || 3001;
 const app = express();
+app.use(express.static('./client/build'))
 
 app.use(expressSession({
   store: new pgSession({

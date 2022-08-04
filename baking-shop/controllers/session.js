@@ -4,7 +4,7 @@ const db = require('../db/db')
 const router = express.Router()
 const bcrypt = require('bcrypt');
 
-//Test Case is amanda@test.com, test123
+//Test Case is admin@test.com, test123
 function isValidPassword(plainTextPassword, passwordHash) {
   // Returns true or false
   return bcrypt.compareSync(plainTextPassword, passwordHash)
