@@ -44,7 +44,7 @@ router.get('/', (req,res) => {
   const email = req.session.email
   console.log(email, 'this is a logged in user')
   res.json({
-      'userId': id,
+      'id': id,
       'name': name,
       'email': email
   })

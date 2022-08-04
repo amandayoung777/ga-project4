@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <Title/>
       <NavBar/>
-      <Products/>
 
     </div>
   );

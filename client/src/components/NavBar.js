@@ -9,6 +9,9 @@ import {
 import Home from './Home';
 import Products from './Products';
 import AboutPage from './AboutPage';
+import ContactPage from "./Contact";
+import SignUp from "./SignUp";
+import Shopping from "./Shopping";
 
 function NavBar() {
     return (
@@ -25,7 +28,16 @@ function NavBar() {
                   <Link to="/about">About</Link>
                 </button>
                 <button>
-                  <Link to="/products">Products</Link>
+                  <Link to="/products">Shopping</Link>
+                </button>
+                <button>
+                  <Link to="/contact">Contact Manda</Link>
+                </button>
+                <button>
+                  <Link to="/signup">Create Account</Link>
+                </button>
+                <button>
+                  <Link to="/login">Login</Link>
                 </button>
               </ul>
             
@@ -34,6 +46,10 @@ function NavBar() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/products" element={<Shopping />} />
+              {/* <Route path="/login" element={<Login />} /> */}
             </Routes>
           </BrowserRouter>
         </header>

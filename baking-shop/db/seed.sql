@@ -7,3 +7,5 @@ INSERT INTO products (name, price, img) VALUES ('Custom Gingerbread Houses (5 Ho
 INSERT INTO products (name, price, img) VALUES ('Mixed Holiday Packs (1 pack)', 10, 'https://imgur.com/ANinMFA.jpg');
 
 INSERT INTO users (name, email, password_hash, admin) VALUES ('amanda', 'amanda@test.com', 'test123', 'true');
+
+INSERT INTO users (name, email, message) VALUES ('test', 'test@test.com', 'Hi this is a test message');

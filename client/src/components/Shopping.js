@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 // import "../../../baking-shop/db/db";
 
-function Products(props) {
+function Shopping(props) {
   const [allProducts, setAllProducts] = useState([]);
   // const [selectedProducts,setSelectedProducts] = useState()
 
@@ -26,7 +26,7 @@ function Products(props) {
 
   return (
     <div className="Products">
-      <p>All my lovely products</p>
+      <p>Let's Go Shopping</p>
 
       <div className="prods">
         {allProducts.map((prod) => {
@@ -44,8 +44,6 @@ function Products(props) {
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></form>
-            
-
             </div>
           );
         })}
@@ -54,4 +52,5 @@ function Products(props) {
   );
 }
 
-export default Products;
+export default Shopping;
+
