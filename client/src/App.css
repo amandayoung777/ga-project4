@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -52,12 +60,27 @@
 .nav-bar button {
   all: unset;
   padding: 8px;
+  text-decoration: none;
+
+}
+
+.nav-bar button a {
+  text-decoration: none;
+  
 }
 
 .nav-bar button:hover {
   background-color: #e996c9; 
   color: white;
   border-radius: 12px;
+  font: white;
+}
+
+.nav-bar button:hover a {
+  background-color: #e996c9; 
+  color: white;
+  border-radius: 12px;
+  font: white;
 }
 
 .prods {
@@ -76,3 +99,15 @@
   height: 200px;
 }
 
+.success-message {
+  color: teal;
+  margin-top: 50px;
+}
+
+.col-1 {
+  flex: 1
+}
+
+.col-2 {
+  flex: 2
+}

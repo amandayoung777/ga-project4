@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import "../../../baking-shop/db/db";
+import Product from "./Product";
 
-function Products(props) {
+function Products({onAdd, cartItems}) {
   const [allProducts, setAllProducts] = useState([]);
   // const [selectedProducts,setSelectedProducts] = useState()
 
@@ -22,11 +22,18 @@ function Products(props) {
       .catch((err) => {
         console.log(err);
       });
-  },[])
-
+  },[]);
+   const handleSubmit = (e, prod) => {
+    e.preventDefault();
+    console.log(prod);
+    // onAdd();
+   }
+ 
   return (
+    <main className="block col-2">
     <div className="Products">
       <p>All my lovely products</p>
+      
 
       <div className="prods">
         {allProducts.map((prod) => {
@@ -35,15 +42,17 @@ function Products(props) {
               <img className="prod-img" src={prod.img} alt={prod.name}></img>
               <p>{prod.name}</p>
               <p>${prod.price}</p>
+              {/* <Product key={prod.id} prod={prod}></Product> */}
               <form>
-                <label for="qty">Quantity:</label>
-
+                <label for="qty"></label>
+{/* 
                 <select name="qty" id="qty">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                </select></form>
+                </select> */}
+                <button onClick={() => handleSubmit(prod.name)}>Add To Cart</button></form>
             
 
             </div>
@@ -51,6 +60,7 @@ function Products(props) {
         })}
       </div>
     </div>
+    </main>
   );
 }
 
