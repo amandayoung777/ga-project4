@@ -1,16 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Product from "./Product";
+
 
 function Products({onAdd, cartItems}) {
   const [allProducts, setAllProducts] = useState([]);
-  // const [selectedProducts,setSelectedProducts] = useState()
-
-  //This is will render all products on the page
-  // const eachProduct=(product)=>{
-  //     setSelectedProducts([...selectedProducts,product])
-
-  // }
 
   useEffect(() => {
     axios
@@ -32,9 +25,6 @@ function Products({onAdd, cartItems}) {
   return (
     <main className="block col-2">
     <div className="Products">
-      <p>All my lovely products</p>
-      
-
       <div className="prods">
         {allProducts.map((prod) => {
           return (
@@ -59,6 +49,7 @@ function Products({onAdd, cartItems}) {
           );
         })}
       </div>
+      <p className="prod-heading">Products For Sale (Message Me to Buy)</p>
     </div>
     </main>
   );

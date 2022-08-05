@@ -7,7 +7,9 @@ const db = require('./baking-shop/db/db.js');
 
 const productController = require('./baking-shop/controllers/productslist');
 const sessionController = require('./baking-shop/controllers/session');
-const usersController = require('./baking-shop/controllers/users') ;
+const usersController = require('./baking-shop/controllers/users');
+const messagesController = require('./baking-shop/controllers/messages');
+const contactController = require('./baking-shop/controllers/contact');
 
 const port = process.env.PORT || 3001;
 const app = express();
@@ -28,6 +30,8 @@ app.use(express.json());
 app.use('/api/products', productController);
 app.use('/api/session', sessionController);
 app.use('/api/users', usersController);
+app.use('/api/messages', messagesController);
+app.use('/api/contact', contactController);
 
 app.use((req, res, next) => {
   console.log(`${new Date()} ${req.method} ${req.path}`);

@@ -1,13 +1,7 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
 
-import ContactPage from './Contact';
+// import ContactPage from './Contact';
 import Products from "./Products";
+// import onAdd from 
 
 function Home() {
     return (

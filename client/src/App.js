@@ -3,17 +3,7 @@ import NavBar from './components/NavBar';
 import Title from "./components/Header";
 import Cart from "./components/Cart";
 import { useState } from 'react';
-// import Switch from '@mui/material/Switch';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
 import Products from "./components/Products";
-
-
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

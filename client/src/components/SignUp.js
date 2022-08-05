@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import Home from "./Home";
 
 function SignUp() {
     const [name, setName] = useState('');
@@ -41,10 +40,10 @@ function SignUp() {
             <h2>Sign Up!</h2>
             <form onSubmit={handleSubmit}>           
             <p><label for="name">Name: </label>
-            <input type="text" name="name" placeholder="name" value={name}
+            <input type="text" name="name" placeholder="name" autocomplete="off" value={name}
             onChange={(e) => setName(e.target.value)}></input></p>
             <p><label for="email">Email Address: </label>
-            <input type="text" name="email" placeholder="email" value={email}
+            <input type="text" name="email" placeholder="email" autocomplete="off" value={email}
             onChange={(e) => setEmail(e.target.value)}></input></p>
             <p><label for="password">Password </label>
             <input type="password" name="password_hash" placeholder="password" value={password_hash}

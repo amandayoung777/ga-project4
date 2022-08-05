@@ -1,5 +1,5 @@
 function Title() {
-    return <h1 className="shopName">Session Cookies</h1>;
+    return <h1 className="shopName">Session Cookies Bake Shop</h1>;
   }
 
   export default Title

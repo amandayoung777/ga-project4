@@ -2,8 +2,7 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    Link,
-    useParams,
+    Link
   } from "react-router-dom";
 import {useState} from "react";
 
@@ -14,6 +13,7 @@ import ContactPage from "./Contact";
 import SignUp from "./SignUp";
 import Shopping from "./Shopping";
 import Login from "./Login";
+import Messages from "./Messages";
 
 function NavBar({onAdd, cartItems}) {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -31,10 +31,10 @@ function NavBar({onAdd, cartItems}) {
                 <button>
                   <Link to="/products">Shopping</Link>
                 </button>
-                <button>
+
+                 {loggedIn === true ? <div><p>You are logged in</p>                 <button>
                   <Link to="/contact">Contact Manda</Link>
-                </button>
-                 {loggedIn === true ? <p>You are logged in</p> :
+                </button></div> :
                 <div>
                 <button>
                   <Link to="/signup">Create Account</Link>
@@ -53,6 +53,7 @@ function NavBar({onAdd, cartItems}) {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/products" element={<Shopping />} />
+              <Route path="/messages" element={<Messages />} />
               <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
             </Routes>
           </BrowserRouter>

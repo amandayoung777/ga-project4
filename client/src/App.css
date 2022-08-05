@@ -1,5 +1,27 @@
 .App {
   text-align: center;
+  display: grid;
+
+}
+
+body {
+  display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* background-color: rgb(189, 222, 189); */
+
+}
+
+.shopName {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 50px;  
+    padding-top: 15px;
+    color: rgb(32, 72, 139);
+}
+
+.prod-heading {
+
+  font-size: 20px; 
+
 }
 
 .App-logo {
@@ -43,6 +65,10 @@ a {
   to {
     transform: rotate(360deg);
   }
+}
+
+.font-link {
+  font-family: 'Fredoka One';
 }
 
 .nav-bar {
@@ -104,10 +130,47 @@ a {
   margin-top: 50px;
 }
 
-.col-1 {
-  flex: 1
+.cart {
+  padding-bottom: 30px;
+
 }
 
 .col-2 {
   flex: 2
+}
+
+aside {
+  grid-column: -1fr;
+}
+
+.prod-id {
+  margin-bottom: 50px;
+
+}
+
+.Contact input {
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(32, 72, 139);;
+  box-sizing: border-box;
+  place-items: center;
+  border-radius: 5px;
+}
+
+.Contact h3 {
+  padding-top: 15px;
+  color: rgb(32, 72, 139);
+  font-size: 30px;
+}
+
+.Contact label {
+  padding-top: 15px;
+  color: rgb(32, 72, 139);
+}
+
+/* Message function */
+.msg-id {
+  border: solid 2px coral;
+  grid-template-columns: 2fr;
+  color: rgb(141, 96, 141);
 }
