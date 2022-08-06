@@ -57,7 +57,7 @@ app.use((err, req, res, next) => {
 
 
 /* final catch-all route to index.html defined last */
-server.get('/*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/client/build/index.html');
 })
 
