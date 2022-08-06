@@ -37,8 +37,8 @@ function Login(props) {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <p>
-          <label for="email">Email Address: </label>
-          <input
+          <label for="email">Email Address: </label></p>
+          <p><input
             type="text"
             name="email"
             placeholder="email"
@@ -47,8 +47,8 @@ function Login(props) {
           ></input>
         </p>
         <p>
-          <label for="password">Password </label>
-          <input
+          <label for="password">Password </label></p>
+          <p><input
             type="password"
             name="password"
             placeholder="password"

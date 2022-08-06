@@ -1,8 +1,8 @@
 import {render, screen}  from '@testing-library/react';
 import AboutPage from './components/AboutPage';
 import SignUp from './components/SignUp';
-import Login from './components/Login';
 import App from './App';
+import Shopping from './components/Shopping';
 
 test('aboutPage Route displays with created by content', () => {
   render(<AboutPage />);
@@ -16,8 +16,8 @@ test('SignUp page appears', () => {
   expect(text).toBeInTheDocument();
 })
 
-// test('handleSubmit function appears', () => {
-//   render (<Login />);
-//   const function = screen.getByFunction('Sign Up!');
-//   expect(function).toBeInTheDocument();
-// })
+// test('Shopping Route displays products', () => {
+//   render(<Shopping />);
+//   const showprods = screen.getByTitle('showprods');
+//   expect(showprods).toBeInTheDocument();
+// });

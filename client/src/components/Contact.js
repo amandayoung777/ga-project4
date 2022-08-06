@@ -1,4 +1,8 @@
 import { useState } from "react";
+import {
+  Link
+} from "react-router-dom";
+
 import axios from "axios";
 
 function ContactPage() {
@@ -78,6 +82,10 @@ function ContactPage() {
         <button>Submit</button>
             <div className="success-message">
             <h3>{confirm}</h3>
+            <button className="msg-btn">
+                  <Link to="/messages">Messages</Link>
+                </button>
+
             </div>
       </form>
 

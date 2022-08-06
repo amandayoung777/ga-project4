@@ -23,7 +23,7 @@ function Products({onAdd, cartItems}) {
    }
  
   return (
-    <main className="block col-2">
+    <main className="block col-2">      
     <div className="Products">
       <div className="prods">
         {allProducts.map((prod) => {
@@ -49,7 +49,7 @@ function Products({onAdd, cartItems}) {
           );
         })}
       </div>
-      <p className="prod-heading">Products For Sale (Message Me to Buy)</p>
+
     </div>
     </main>
   );

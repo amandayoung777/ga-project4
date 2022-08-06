@@ -31,9 +31,9 @@ function Shopping(props) {
       <div className="prods">
         {allProducts.map((prod) => {
           return (
-            <div className="prod-id">
+            <div title="showprods" className="prod-id">
               <img className="prod-img" src={prod.img} alt={prod.name}></img>
-              <p>{prod.name}</p>
+              <p >{prod.name}</p>
               <p>${prod.price}</p>
               <form>
                 <label for="qty">Quantity:</label>

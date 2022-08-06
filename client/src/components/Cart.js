@@ -2,8 +2,8 @@
 
 function Cart(props) {
     const {cartItems} = props;
-    return <aside className='cart'>
-        <h2>Your Cart</h2>
+    return <div className='cart'>
+        <h3>Your Cart</h3>
         <div>
             {cartItems.length === 0 ? <div>Cart is Empty</div> :
             cartItems.map((name, index) => {
@@ -11,12 +11,13 @@ function Cart(props) {
                 return (
             <div>{name}</div>
 
+
             )
             })
             }
 
         </div>
-    </aside>
+    </div>
 }
 
 export default Cart;

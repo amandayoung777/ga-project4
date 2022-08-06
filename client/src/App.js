@@ -1,7 +1,6 @@
 import "./App.css";
 import NavBar from './components/NavBar';
 import Title from "./components/Header";
-import Cart from "./components/Cart";
 import { useState } from 'react';
 import Products from "./components/Products";
 
@@ -24,10 +23,6 @@ function App() {
     <div className="App">
       <Title/>
       <NavBar onAdd={onAdd} cartItems={cartItems}/>
-      <div>
-      <Cart onAdd={onAdd} cartItems={cartItems}/>  
-      </div>
-
 
     </div>
   );

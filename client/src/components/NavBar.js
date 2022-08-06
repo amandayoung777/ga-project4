@@ -11,9 +11,9 @@ import Products from './Products';
 import AboutPage from './AboutPage';
 import ContactPage from "./Contact";
 import SignUp from "./SignUp";
-import Shopping from "./Shopping";
 import Login from "./Login";
 import Messages from "./Messages";
+import Cart from "./Cart";
 
 function NavBar({onAdd, cartItems}) {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -29,7 +29,7 @@ function NavBar({onAdd, cartItems}) {
                   <Link to="/about">About</Link>
                 </button>
                 <button>
-                  <Link to="/products">Shopping</Link>
+                  <Link to="/cart">Cart</Link>
                 </button>
 
                  {loggedIn === true ? <div><p>You are logged in</p>                 <button>
@@ -52,7 +52,7 @@ function NavBar({onAdd, cartItems}) {
               <Route path="/products" element={<Products onAdd={onAdd} cartItems={cartItems}/>} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/signup" element={<SignUp />} />
-              <Route path="/products" element={<Shopping />} />
+              <Route path="/cart" element={<Cart onAdd={onAdd} cartItems={cartItems}/>} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
             </Routes>

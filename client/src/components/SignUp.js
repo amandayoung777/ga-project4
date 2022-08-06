@@ -39,14 +39,14 @@ function SignUp() {
         <div className="Sign-Up">
             <h2>Sign Up!</h2>
             <form onSubmit={handleSubmit}>           
-            <p><label for="name">Name: </label>
-            <input type="text" name="name" placeholder="name" autocomplete="off" value={name}
+            <p><label for="name">Name: </label></p>
+            <p><input type="text" name="name" placeholder="name" autocomplete="off" value={name}
             onChange={(e) => setName(e.target.value)}></input></p>
-            <p><label for="email">Email Address: </label>
-            <input type="text" name="email" placeholder="email" autocomplete="off" value={email}
+            <p><label for="email">Email Address: </label></p>
+            <p><input type="text" name="email" placeholder="email" autocomplete="off" value={email}
             onChange={(e) => setEmail(e.target.value)}></input></p>
-            <p><label for="password">Password </label>
-            <input type="password" name="password_hash" placeholder="password" value={password_hash}
+            <p><label for="password">Password </label></p>
+            <p><input type="password" name="password_hash" placeholder="password" value={password_hash}
             onChange={(e) => setPassword(e.target.value)}></input></p>
             <button>Submit</button>
             <div className="success-message">
